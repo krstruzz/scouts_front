@@ -1,0 +1,14 @@
+<h2>These are scouts</h2>
+<ul class="scouts">
+  <li *ngFor="let scout of scouts"
+      [class.selected]="scout === selected"
+      (click)="onSelect(scout)">
+    <span class="badge">{{scout.id}}</span> {{scout.firstName}}
+  </li>
+</ul>
+<div *ngIf="selected != null">
+  <h2>
+      {{selected.firstName | uppercase}} is a cub scout
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

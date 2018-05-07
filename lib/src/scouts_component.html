@@ -1,0 +1,25 @@
+<div *ngIf="scout != null">
+    <h2>{{scout.firstName}}</h2>
+    <div>
+        <label>First Name: </label>
+        <input [(ngModel)]="scout.firstName" placeholder="firstName"/>
+    </div>
+      <button (click)="goBack()">Back</button>
+</div>
+
+
+  <!--h2>Scouts</h2>
+  <my-scouts></my-scouts>
+  <ul class="scouts">
+      <li *ngFor="let scout of scouts"
+          [class.selected]="scout === selectedScout"
+          (click)="onSelect(scout)">
+          <span class="badge">{{scout.id}}</span> {{scout.name}}
+      </li>
+  </ul>
+  <div-- *ngIf="selectedScout != null">
+      <h2>
+          {{selectedScout.name | uppercase}} is a cub scout
+      </h2>
+      <button (click)="gotoDetail()">View Details</button>
+  </div-->

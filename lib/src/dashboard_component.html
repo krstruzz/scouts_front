@@ -1,0 +1,9 @@
+<h3>Top Scouts</h3>
+<!--div class="grid grid-pad"-->
+    <a *ngFor="let scout of scouts" class="col-1-4"
+       [routerLink]="scoutUrl(scout.firstName)" >
+        <div class="module scout">
+            <h4>{{scout.firstName}}</h4>
+        </div>
+    </a>
+<!--/div-->
